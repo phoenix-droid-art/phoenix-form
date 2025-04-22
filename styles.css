@@ -76,6 +76,9 @@ body {
 }
 /* Etapas (formulário, loading, confirmação) */
 
+.etapa {
+    display: none;
+}
 .etapa.ativa {
     display: block;
 }

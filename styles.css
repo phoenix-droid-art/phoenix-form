@@ -76,12 +76,14 @@ body {
 }
 /* Etapas (formulário, loading, confirmação) */
 
-.etapa {
-    display: none;
-}
 .etapa.ativa {
     display: block;
 }
+
+.etapa {
+    display: none;
+}
+
 .form-container h2 {
     font-size: 28px;
     margin-bottom: 16px;

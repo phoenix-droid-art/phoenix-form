@@ -74,16 +74,15 @@ body {
     justify-content: center;
     position: relative;
 }
-/* Etapas (formulário, loading, confirmação) */
 
-.etapa.ativa {
+/* Etapas (formulário, loading, confirmação) */
+#conteudo-formulario > .etapa.ativa { /* Adiciona um seletor de ID pai */
     display: block;
 }
 
 .etapa {
     display: none;
 }
-
 .form-container h2 {
     font-size: 28px;
     margin-bottom: 16px;

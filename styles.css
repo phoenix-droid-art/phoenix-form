@@ -75,17 +75,18 @@ body {
     position: relative;
 }
 
+/* Estados */
+.hidden {
+    display: none !important;
+}
+
 /* Etapas (formulário, loading, confirmação) */
 .etapa {
     display: none; /* Esconde todas as etapas por padrão */
 }
 
 .etapa.ativa {
-    display: block; /* Para a etapa inicial (formulário) */
-}
-
-.etapa:not(.hidden) { /* Mostra qualquer etapa que NÃO tenha a classe .hidden */
-    display: block;
+    display: block; /* Mostra a etapa ativa */
 }
 
 .form-container h2 {
@@ -152,11 +153,6 @@ button {
 
 button:hover {
     background-color: #a31f3f;
-}
-
-/* Estados */
-.hidden {
-    display: none !important;
 }
 
 /* Loading animation */

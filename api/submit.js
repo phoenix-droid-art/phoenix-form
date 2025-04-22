@@ -1,16 +1,16 @@
 export default async function handler(req, res) {
+    // CORS
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  
     if (req.method === 'OPTIONS') {
-      res.setHeader('Access-Control-Allow-Origin', '*');
-      res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-      res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
       return res.status(200).end();
     }
   
     if (req.method !== 'POST') {
       return res.status(405).json({ error: 'Método não permitido' });
     }
-  
-    res.setHeader('Access-Control-Allow-Origin', '*');
   
     const { nome, email, telefone } = req.body;
   
@@ -27,9 +27,7 @@ export default async function handler(req, res) {
       const response = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          values: [[nome, email, telefone]]
-        }),
+        body: JSON.stringify({ values: [[nome, email, telefone]] }),
       });
   
       if (!response.ok) throw new Error('Erro ao enviar para a planilha');

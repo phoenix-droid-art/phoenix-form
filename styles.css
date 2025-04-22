@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden; /* evita rolagem lateral */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 0px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+}
+
+.left-section {
+    padding: 52px;
+    background-color: #000000;
+}
+
+.left-section img {
+    max-width: 160px;
+    margin-bottom: 32px;
+}
+
+.left-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: #f5f5f5;
+    margin-bottom: 16px;
+}
+
+.left-section .highlight-box {
+    display: inline-block;
+    background-color: #bc2649;
+    padding: 4px 12px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.left-section p {
+    font-size: 18px;
+    color: #d1d5db;
+}
+
+.form-container {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    padding: 20px 40px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    min-height: 450px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+/* Etapas (formulário, loading, confirmação) */
+.etapa {
+    display: none;
+}
+.etapa.ativa {
+    display: block;
+}
+.form-container h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: #bc2649;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2a2a2a;
+    color: #f5f5f5;
+}
+
+
+input::placeholder {
+    color: #cbd5e1;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center; /* <-- garante alinhamento vertical */
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .checkbox-container label {
+    font-size: 14px;
+    line-height: 1; /* <-- ajuda a alinhar perfeitamente */
+    margin: 0;       /* remove espaçamentos extras */
+  }
+button {
+    background-color: #bc2649;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #a31f3f;
+}
+
+/* Estados */
+.hidden {
+    display: none !important;
+}
+
+/* Loading animation */
+.loading-animation {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #1a1a1a; /* Cor do fundo do lado direito */
+    border-top: 5px solid #bc2649; /* Cor do destaque */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 16px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loading p {
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/* Confirmação */
+.checkmark-animation {
+    font-size: 48px;
+    color: #bc2649; /* cor personalizada */
+    animation: pop 0.6s ease-out forwards;
+    margin-bottom: 16px;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#confirmacao {
+    text-align: center;
+}
+
+#confirmacao p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#confirmacao a {
+    text-decoration: none; /* remove sublinhado */
+}
+
+#confirmacao h2 {
+    color: #ffffff;
+  }
+
+.whatsapp-logo {
+    width: 18px;
+    vertical-align: middle;
+}
+
+.styled-button {
+    background-color: #bc2649;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto 0 auto; /* espaçamento e centralização */
+}
+
+.styled-button:hover {
+    background-color: #a51f3c;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .left-section, .form-container {
+        padding: 20px;
+    }
+
+    .left-section {
+        text-align: center;
+    }
+
+    .form-container {
+        border-radius: 0 0 16px 16px;
+    }
+
+    .form-container h2 {
+        font-size: 32px;
+    }
+    
+    .checkbox-container label {
+        font-size: 12px;
+    }
+}

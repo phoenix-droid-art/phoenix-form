@@ -1,3 +1,5 @@
+import { google } from 'googleapis';
+
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -18,30 +20,33 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
   }
 
-  const sheetId = process.env.SHEET_ID;
-  const apiKey = process.env.GOOGLE_API_KEY;
-  const range = 'Cadastro!A2:C';
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}:append?valueInputOption=USER_ENTERED&key=${apiKey}`;
-
   try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        values: [[nome, email, telefone]]
-      }),
+    const auth = new google.auth.GoogleAuth({
+      credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY),
+      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
 
-    const data = await response.json();
+    const sheets = google.sheets({ version: 'v4', auth });
+    const sheetId = process.env.SHEET_ID;
+    const range = 'Cadastro!A2:C';
 
-    if (!response.ok) {
-      console.error('Erro da API Google Sheets:', data); // <-- MOSTRA O ERRO REAL
+    const response = await sheets.spreadsheets.values.append({
+      spreadsheetId: sheetId,
+      range: range,
+      valueInputOption: 'USER_ENTERED',
+      requestBody: {
+        values: [[nome, email, telefone]],
+      },
+    });
+
+    if (response.status !== 200) {
+      console.error('Erro da API Google Sheets:', response.data);
       throw new Error('Erro ao enviar para a planilha');
     }
 
     return res.status(200).json({ success: true });
   } catch (error) {
-    console.error('Erro no backend:', error); // <-- LOGA O ERRO NO VERCEL
+    console.error('Erro no backend:', error);
     return res.status(500).json({ error: 'Erro interno do servidor' });
   }
 }

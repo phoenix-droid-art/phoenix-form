@@ -1,40 +1,47 @@
 export default async function handler(req, res) {
-    // CORS
+  if (req.method === 'OPTIONS') {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  
-    if (req.method === 'OPTIONS') {
-      return res.status(200).end();
-    }
-  
-    if (req.method !== 'POST') {
-      return res.status(405).json({ error: 'Método não permitido' });
-    }
-  
-    const { nome, email, telefone } = req.body;
-  
-    if (!nome || !email || !telefone) {
-      return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
-    }
-  
-    const sheetId = process.env.SHEET_ID;
-    const apiKey = process.env.GOOGLE_API_KEY;
-    const range = 'Cadastro!A2:C';
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}:append?valueInputOption=USER_ENTERED&key=${apiKey}`;
-  
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ values: [[nome, email, telefone]] }),
-      });
-  
-      if (!response.ok) throw new Error('Erro ao enviar para a planilha');
-  
-      return res.status(200).json({ success: true });
-    } catch (error) {
-      return res.status(500).json({ error: 'Erro interno do servidor' });
-    }
+    return res.status(200).end();
   }
-  
+
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Método não permitido' });
+  }
+
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
+  const { nome, email, telefone } = req.body;
+
+  if (!nome || !email || !telefone) {
+    return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
+  }
+
+  const sheetId = process.env.SHEET_ID;
+  const apiKey = process.env.GOOGLE_API_KEY;
+  const range = 'Cadastro!A2:C';
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}:append?valueInputOption=USER_ENTERED&key=${apiKey}`;
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        values: [[nome, email, telefone]]
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.error('Erro da API Google Sheets:', data); // <-- MOSTRA O ERRO REAL
+      throw new Error('Erro ao enviar para a planilha');
+    }
+
+    return res.status(200).json({ success: true });
+  } catch (error) {
+    console.error('Erro no backend:', error); // <-- LOGA O ERRO NO VERCEL
+    return res.status(500).json({ error: 'Erro interno do servidor' });
+  }
+}

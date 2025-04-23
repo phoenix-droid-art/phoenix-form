@@ -95,6 +95,7 @@ body {
 .left-section p {
     font-size: 18px;
     color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .form-container {
@@ -176,7 +177,7 @@ input::placeholder {
     font-size: 14px;
     line-height: 1; /* <-- ajuda a alinhar perfeitamente */
     margin: 0;       /* remove espaçamentos extras */
-    font-family: sans-serif;
+    font-family: Andis;
   }
 button {
     background-color: #bc2649;

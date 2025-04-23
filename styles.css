@@ -101,9 +101,9 @@ body {
       justify-content: center;
 }
 
-.left-section img {
-    max-width: 160px;
-    margin-bottom: 32px;
+.left-section .logo {
+  max-width: 160px;
+  margin-bottom: 32px;
 }
 
 .left-section h1 {

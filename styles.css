@@ -176,7 +176,7 @@ input::placeholder {
   }
   
   .checkbox-container label {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1; /* <-- ajuda a alinhar perfeitamente */
     margin: 0;       /* remove espaçamentos extras */
     font-weight: 300;
@@ -283,7 +283,7 @@ button:hover {
     
     body {
         background-position: top;
-  }
+    }
     .container {
         grid-template-columns: 1fr;
     }
@@ -298,8 +298,8 @@ button:hover {
     }
 
     .left-section p {
+        font-weight: 300;
         font-size: 18px;
-        font-weight: 400;
     }
 
     .form-container {
@@ -308,6 +308,10 @@ button:hover {
 
     .form-container h2 {
         font-size: 32px;
+    }
+
+    .form-container p {
+        font-family: 'Andis', sans-serif;
     }
     
     .checkbox-container label {

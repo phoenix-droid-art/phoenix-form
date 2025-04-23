@@ -96,6 +96,8 @@ body {
 .left-section p {
     font-size: 18px;
     color: #fff;
+    font-weight: 600;
+    font-family: 'Andis', sans-serif;
 }
 
 .form-container {
@@ -177,7 +179,8 @@ input::placeholder {
     font-size: 14px;
     line-height: 1; /* <-- ajuda a alinhar perfeitamente */
     margin: 0;       /* remove espaçamentos extras */
-    font-family: Andis;
+    font-weight: 300;
+    font-family: 'Andis', sans-serif;
   }
 button {
     background-color: #bc2649;
@@ -241,6 +244,8 @@ button:hover {
     text-align: center;
     margin-bottom: 20px;
     font-size: 18px;
+    font-weight: 600;
+    font-family: 'Andis', sans-serif;
 }
 
 #confirmacao a {

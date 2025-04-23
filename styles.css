@@ -339,10 +339,11 @@ button:hover {
     */
     .left-section {
         padding: 52px 20px 52px 20px;
-        background-color: #000000;
         position: relative;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .left-section p {

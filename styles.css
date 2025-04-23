@@ -374,7 +374,8 @@ button:hover {
         font-size: 28px;
     }
 
-    .confirmacao p {
+    #confirmacao p {
+        font-weight: 400;
         font-family: 'Andis', sans-serif;
     }
     

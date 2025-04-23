@@ -19,6 +19,14 @@
 }
 
 @font-face {
+  font-family: 'Axiforma-Light';
+  src: url('https://github.com/phoenix-droid-art/phoenix-form/raw/refs/heads/main/fonts/Axiforma-Light.woff2') format('woff2');
+  font-weight: light;
+  font-style: normal;
+}
+
+
+@font-face {
   font-family: 'Andis';
   src: url('https://github.com/phoenix-droid-art/phoenix-form/raw/refs/heads/main/fonts/Andis-Regular.otf') format('otf');
   font-weight: normal;
@@ -134,6 +142,7 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
+    font-family: 'Axiforma-Regular', 'Montserrat', sans-serif;
     font-size: 14px;
 }
 
@@ -146,7 +155,7 @@ input[type="tel"] {
     border: none;
     background-color: #2a2a2a;
     color: #f5f5f5;
-    font-family: 'Axiforma-Regular', 'Montserrat', sans-serif;
+    font-family: 'Axiforma-Light', sans-serif;
 }
 
 
@@ -167,10 +176,12 @@ input::placeholder {
     font-size: 14px;
     line-height: 1; /* <-- ajuda a alinhar perfeitamente */
     margin: 0;       /* remove espaçamentos extras */
+    font-family: 'Inter', sans-serif;
   }
 button {
     background-color: #bc2649;
     color: #fff;
+    font-family: 'Axiforma-Bold', 'Montserrat', sans-serif;
     border: none;
     padding: 12px 24px;
     border-radius: 8px;

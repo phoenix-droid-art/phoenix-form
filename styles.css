@@ -52,7 +52,6 @@ body {
     grid-template-columns: 1fr 1fr;
     max-width: 1200px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* fundo semi-transparente */
     border-radius: 0px;
     overflow: hidden;
     box-shadow: 0 0 40px rgba(0,0,0,0.3);
@@ -60,8 +59,8 @@ body {
 
 .left-section {
     padding: 52px;
-    background-color: #000;
-    
+    background-color: rgba(0, 0, 0, 0.85); /* fundo semi-transparente */
+
 }
 
 .left-section img {
@@ -121,6 +120,7 @@ body {
 
 .form-container h2 {
     font-size: 28px;
+    font-family: 'Axiforma-Bold', 'Montserrat', sans-serif;
     margin-bottom: 16px;
     color: #bc2649;
     text-align: center;

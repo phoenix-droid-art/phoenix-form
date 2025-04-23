@@ -275,6 +275,10 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+    
+    body {
+        background-position: top;
+  }
     .container {
         grid-template-columns: 1fr;
     }
@@ -285,10 +289,6 @@ button:hover {
 
     .left-section {
         text-align: center;
-    }
-
-    .left-section p {
-        background-color: rgba(0, 0, 0, 0.5);
     }
 
     .form-container {

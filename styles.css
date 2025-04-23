@@ -52,14 +52,14 @@ body {
     grid-template-columns: 1fr 1fr;
     max-width: 1200px;
     width: 100%;
-    border-radius: 0px;
+    /* border-radius: 0px; */
     overflow: hidden;
-    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    /* box-shadow: 0 0 40px rgba(0,0,0,0.3); */
 }
 
 .left-section {
     padding: 52px;
-    background-color: rgba(0, 0, 0, 0.85); /* fundo semi-transparente */
+    background-color: transparent;
 
 }
 

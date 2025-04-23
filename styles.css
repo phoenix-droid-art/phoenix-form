@@ -5,9 +5,16 @@
 }
 
 @font-face {
-  font-family: 'Axiforma';
+  font-family: 'Axiforma-Bold';
   src: url('https://github.com/phoenix-droid-art/phoenix-form/raw/refs/heads/main/fonts/Axiforma-Bold.woff2') format('woff2');
-  font-weight: normal;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Axiforma-Regular';
+  src: url('https://github.com/phoenix-droid-art/phoenix-form/raw/refs/heads/main/fonts/Axiforma-Regular.woff2') format('woff2');
+  font-weight: regular;
   font-style: normal;
 }
 
@@ -21,7 +28,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Axiforma', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-image: url('https://raw.githubusercontent.com/phoenix-droid-art/phoenix-form/e1e407b4d53ac81f6944a8285f943f0b4e69661e/assets/background.webp'); /* Exemplo */
     background-size: cover;
     background-position: center;
@@ -63,7 +70,7 @@ body {
 }
 
 .left-section h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Axiforma-Bold', 'Montserrat', sans-serif;
     font-size: 40px;
     color: #f5f5f5;
     margin-bottom: 16px;
@@ -81,7 +88,6 @@ body {
 .left-section p {
     font-size: 18px;
     color: #d1d5db;
-    font-family: 'Andis', sans-serif;
 }
 
 .form-container {
@@ -140,6 +146,7 @@ input[type="tel"] {
     border: none;
     background-color: #2a2a2a;
     color: #f5f5f5;
+    font-family: 'Axiforma-Regular', 'Montserrat', sans-serif;
 }
 
 

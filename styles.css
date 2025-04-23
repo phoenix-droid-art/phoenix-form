@@ -77,29 +77,28 @@ body {
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     max-width: 1200px;
     width: 100%;
-    padding-top: 60px; /* Ajuste para não sobrepor a logo */
+    /* border-radius: 0px; */
+    overflow: hidden;
+    /* box-shadow: 0 0 40px rgba(0,0,0,0.3); */
 }
 
 .left-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Alinha o conteúdo da esquerda */
-    flex: 1;
-    padding: 48px;
-    position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* a logo vai pro topo */
+      padding: 48px;
+      position: relative;
 }
 
 .left-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Ajusta alinhamento */
-    align-items: flex-start;
-    margin-right: 20px; /* Alinhamento com o formulário */
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 }
 
 .left-section img {
@@ -136,7 +135,7 @@ body {
     padding: 20px 40px;
     max-width: 500px;
     width: 100%;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
     min-height: 450px;
     transition: all 0.3s ease-in-out;
     display: flex;
@@ -310,53 +309,65 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding-top: 20px;
+    
+    body {
+        background-position: top;
     }
 
-    .left-section {
-        padding: 20px;
-        text-align: center;
+  /* .logo-container {
+        justify-content: center;
+        margin-bottom: 24px;
     }
-
-    .form-container {
-        margin-top: 20px;
-        border-radius: 0 0 16px 16px;
-    }
-
-    .left-content {
-        margin-right: 0;
-    }
-
+    */
+    
     .logo-container {
         position: relative;
         top: 0;
         left: 0;
         display: flex;
         justify-content: center;
-        margin-bottom: 24px;
+        margin-bottom: 18px;
     }
-
-    .left-section h1 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .left-section p {
-        font-size: 18px;
-        font-weight: 300;
-        text-align: center;
-        align-items: center;
-    }
-}
-
+    
     .container {
         grid-template-columns: 1fr;
     }
 
     .left-section, .form-container {
         padding: 20px;
+    }
+
+   /* .left-section {
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+        font-size: 24px;
+    }
+    */
+    .left-section {
+        padding: 20;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-section p {
+        font-weight: 300;
+        font-size: 18px;
+    }
+
+    .left-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .form-container {
+        border-radius: 0 0 16px 16px;
     }
 
     .form-container h2 {

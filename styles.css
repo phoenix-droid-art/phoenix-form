@@ -6,14 +6,14 @@
 
 @font-face {
   font-family: 'Axiforma';
-  src: url('https://github.com/phoenix-droid-art/phoenix-form/blob/0fb1a2697a3e9c48a7a64184bbf43da323508797/fonts/Axiforma-Bold.woff2') format('woff2');
+  src: url('https://github.com/phoenix-droid-art/phoenix-form/raw/refs/heads/main/fonts/Axiforma-Bold.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Andis';
-  src: url('https://github.com/phoenix-droid-art/phoenix-form/blob/0fb1a2697a3e9c48a7a64184bbf43da323508797/fonts/Andis-Regular.otf') format('otf');
+  src: url('https://github.com/phoenix-droid-art/phoenix-form/raw/refs/heads/main/fonts/Andis-Regular.otf') format('otf');
   font-weight: normal;
   font-style: normal;
 }
@@ -22,7 +22,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Axiforma', sans-serif;
-    background-image: url('https://github.com/phoenix-droid-art/phoenix-form/blob/e1e407b4d53ac81f6944a8285f943f0b4e69661e/assets/background.webp'); /* Exemplo */
+    background-image: url('https://raw.githubusercontent.com/phoenix-droid-art/phoenix-form/e1e407b4d53ac81f6944a8285f943f0b4e69661e/assets/background.webp'); /* Exemplo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@ body {
 
 .left-section {
     padding: 52px;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.85); /* fundo semi-transparente */
     
 }
 

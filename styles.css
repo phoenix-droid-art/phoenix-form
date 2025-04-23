@@ -94,9 +94,9 @@ body {
 }
 
 .left-section p {
-    font-size: 18px;
+    font-size: 24px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
     font-family: 'Andis', sans-serif;
 }
 
@@ -244,7 +244,7 @@ button:hover {
     text-align: center;
     margin-bottom: 20px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
     font-family: 'Andis', sans-serif;
 }
 
@@ -294,6 +294,11 @@ button:hover {
 
     .left-section {
         text-align: center;
+        font-size: 24px;
+    }
+
+    .left-section p {
+        font-size: 18px;
     }
 
     .form-container {

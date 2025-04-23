@@ -52,6 +52,10 @@ body {
     overflow-x: hidden; /* evita rolagem lateral */
 }
 
+html, body {
+  height: 100%;
+}
+
 .secondary-text {
     font-family: 'Andis', sans-serif;
 }
@@ -83,15 +87,16 @@ body {
     width: 100%;
     /* border-radius: 0px; */
     overflow: hidden;
+    height: 100vh; /* obrigatório para alinhar verticalmente */
     /* box-shadow: 0 0 40px rgba(0,0,0,0.3); */
 }
 
 .left-section {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start; /* a logo vai pro topo */
-      padding: 48px;
+      padding: 42px;
       position: relative;
+      height: 100%;
 }
 
 .left-content {
@@ -100,7 +105,6 @@ body {
       flex-direction: column;
       justify-content: center;
 }
-
 .left-section .logo {
   max-width: 160px;
   margin-bottom: 32px;
@@ -132,7 +136,7 @@ body {
 .form-container {
     background-color: #1a1a1a;
     border-radius: 20px;
-    padding: 20px 40px;
+    padding: 20px 30px;
     max-width: 500px;
     width: 100%;
     box-shadow: 0px 0px 15px rgba(0,0,0,0.1);

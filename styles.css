@@ -372,10 +372,10 @@ button:hover {
     }
 
     .form-container h2 {
-        font-size: 32px;
+        font-size: 28px;
     }
 
-    #confirmacao p {
+    .form-container p {
         font-family: 'Andis', sans-serif;
     }
     

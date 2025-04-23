@@ -287,6 +287,10 @@ button:hover {
         text-align: center;
     }
 
+    .left-section p {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
     .form-container {
         border-radius: 0 0 16px 16px;
     }

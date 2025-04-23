@@ -315,6 +315,7 @@ button:hover {
     .left-section {
         padding: 20px;
         align-items: center;
+        text-align: center;
         font-size: 24px;
     }
 

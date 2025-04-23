@@ -86,7 +86,7 @@ body {
 
 .left-section p {
     font-size: 18px;
-    color: #d1d5db;
+    color: #fff;
 }
 
 .form-container {
@@ -273,6 +273,7 @@ button:hover {
 
     .left-section {
         text-align: center;
+        background-color: rgba(0, 0, 0, 0.6);
     }
 
     .form-container {

@@ -6,21 +6,21 @@
 
 @font-face {
   font-family: 'Axiforma-Bold';
-  src: url('https://github.com/phoenix-droid-art/phoenix-form/raw/refs/heads/main/fonts/Axiforma-Bold.woff2') format('woff2');
+  src: url('fonts/Axiforma-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Axiforma-Regular';
-  src: url('https://github.com/phoenix-droid-art/phoenix-form/raw/refs/heads/main/fonts/Axiforma-Regular.woff2') format('woff2');
+  src: url('fonts/Axiforma-Regular.woff2') format('woff2');
   font-weight: regular;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Axiforma-Light';
-  src: url('https://github.com/phoenix-droid-art/phoenix-form/raw/refs/heads/main/fonts/Axiforma-Light.woff2') format('woff2');
+  src: url('fonts/Axiforma-Light.woff2') format('woff2');
   font-weight: light;
   font-style: normal;
 }
@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: 'Andis';
-  src: url('https://github.com/phoenix-droid-art/phoenix-form/raw/refs/heads/main/fonts/Andis-Regular.otf') format('otf');
+  src: url('fonts/Andis-Regular.otf') format('otf');
   font-weight: normal;
   font-style: normal;
 }

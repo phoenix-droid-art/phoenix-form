@@ -333,6 +333,11 @@ button:hover {
         grid-template-columns: 1fr;
     }
 
+    #confirmacao p {
+    font-family: 'Andis', sans-serif !important;
+    font-weight: 400 !important;
+    }
+
     .left-section, .form-container {
         padding: 20px;
     }
@@ -374,11 +379,6 @@ button:hover {
         font-size: 28px;
     }
 
-    #confirmacao p {
-        font-weight: 400;
-        font-family: 'Andis', sans-serif;
-    }
-    
     .checkbox-container label {
         font-size: 12px;
     }

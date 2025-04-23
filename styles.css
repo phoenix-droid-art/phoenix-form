@@ -87,7 +87,6 @@ html, body {
     width: 100%;
     /* border-radius: 0px; */
     overflow: hidden;
-    height: 100vh; /* obrigatório para alinhar verticalmente */
     /* box-shadow: 0 0 40px rgba(0,0,0,0.3); */
 }
 
@@ -105,9 +104,10 @@ html, body {
       flex-direction: column;
       justify-content: center;
 }
+
 .left-section .logo {
-  max-width: 160px;
-  margin-bottom: 32px;
+      max-width: 160px;
+      margin-bottom: 32px;
 }
 
 .left-section h1 {

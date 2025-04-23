@@ -87,11 +87,19 @@ body {
 }
 
 .left-section {
-    padding: 20px 52px 52px 52px; /* reduziu o topo */
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* a logo vai pro topo */
+      padding: 52px;
+      background-color: #000000;
+      position: relative;
+}
+
+.left-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 }
 
 .left-section img {
@@ -338,7 +346,7 @@ button:hover {
     }
     */
     .left-section {
-        padding: 52px 20px 52px 20px;
+        padding: 20;
         position: relative;
         display: flex;
         flex-direction: column;

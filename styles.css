@@ -60,7 +60,8 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-bottom: 32px;
+  margin-top: 0;        /* cola no topo */
+  margin-bottom: 32px;  /* mantém espaçamento com o h1 */
 }
 
 .logo-container img {
@@ -79,9 +80,10 @@ body {
 }
 
 .left-section {
-    padding: 52px;
+    padding: 20px 52px 52px 52px; /* reduziu o topo */
     background-color: transparent;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .left-section img {
@@ -298,8 +300,8 @@ button:hover {
     }
 
     .logo-container {
-    justify-content: center;
-    margin-bottom: 24px;
+        justify-content: center;
+        margin-bottom: 24px;
     }
     
     .container {
@@ -311,7 +313,8 @@ button:hover {
     }
 
     .left-section {
-        text-align: center;
+        padding: 20px;
+        align-items: center;
         font-size: 24px;
     }
 

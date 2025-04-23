@@ -90,8 +90,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: flex-start; /* a logo vai pro topo */
-      padding: 52px;
-      background-color: #000000;
+      padding: 48px;
       position: relative;
 }
 

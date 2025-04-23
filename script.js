@@ -3,15 +3,16 @@ IMask(telefoneInput, {
     mask: '(00) 00000-0000'
 });
 
+function mostrarEtapa(id) {
+    const etapas = document.querySelectorAll('.etapa');
+    etapas.forEach(el => el.classList.remove('ativa'));
+    document.getElementById(id).classList.add('ativa');
+}
+
 document.getElementById('formulario').addEventListener('submit', function (e) {
     e.preventDefault();
-
-    const formulario = document.getElementById('formulario-section');
-    const loading = document.getElementById('loading');
-    const confirmacao = document.getElementById('confirmacao');
-
-    formulario.classList.add('hidden');
-    loading.classList.remove('hidden');
+    
+    mostrarEtapa('loading'); // Mostra a tela de carregamento
 
     const dados = {
         nome: document.getElementById('nome').value,
@@ -31,12 +32,10 @@ document.getElementById('formulario').addEventListener('submit', function (e) {
         return response.json();
     })
     .then(() => {
-        loading.classList.add('hidden');
-        confirmacao.classList.remove('hidden');
+        mostrarEtapa('confirmacao'); // Mostra tela de sucesso
     })
     .catch(() => {
         alert("Erro ao enviar. Tente novamente.");
-        loading.classList.add('hidden');
-        formulario.classList.remove('hidden');
+        mostrarEtapa('formulario-section'); // Volta pro formulário
     });
 });

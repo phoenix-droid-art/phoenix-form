@@ -56,12 +56,19 @@ body {
     font-family: 'Andis', sans-serif;
 }
 
-.logo-container {
+/* .logo-container {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-top: 0;        /* cola no topo */
-  margin-bottom: 32px;  /* mantém espaçamento com o h1 */
+  margin-top: 0;        /* cola no topo 
+  margin-bottom: 32px;  /* mantém espaçamento com o h1 
+}  */
+
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
 }
 
 .logo-container img {
@@ -299,9 +306,19 @@ button:hover {
         background-position: top;
     }
 
-    .logo-container {
+  /* .logo-container {
         justify-content: center;
         margin-bottom: 24px;
+    }
+    */
+    
+    .logo-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
     }
     
     .container {

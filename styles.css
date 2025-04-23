@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: 'Andis';
-  src: url('fonts/Andis-Regular.otf') format('otf');
+  src: url('fonts/Andis.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -331,11 +331,6 @@ button:hover {
     
     .container {
         grid-template-columns: 1fr;
-    }
-
-    #confirmacao p {
-    font-family: 'Andis', sans-serif !important;
-    font-weight: 400 !important;
     }
 
     .left-section, .form-container {

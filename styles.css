@@ -66,8 +66,8 @@ body {
 
 .logo-container {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 50px;
+  left: 50px;
   z-index: 10;
 }
 
@@ -313,12 +313,12 @@ button:hover {
     */
     
     .logo-container {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 24px;
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 18px;
     }
     
     .container {
@@ -329,16 +329,32 @@ button:hover {
         padding: 20px;
     }
 
-    .left-section {
+   /* .left-section {
         padding: 20px;
         align-items: center;
         text-align: center;
         font-size: 24px;
     }
+    */
+    .left-section {
+        padding: 52px 20px 52px 20px;
+        background-color: #000000;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
 
     .left-section p {
         font-weight: 300;
         font-size: 18px;
+    }
+
+    .left-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
     }
 
     .form-container {

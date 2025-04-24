@@ -318,24 +318,23 @@ button:hover {
     }
     */
     
-    .logo-container {
+      .logo-container {
         position: relative;
-        top: auto;
-        left: auto;
+        top: 0;
+        left: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 20px auto;
-    }
-    
-      /* Ajuste da estrutura da .container para ficar em uma única coluna */
-      .container {
-        display: block; /* Faz com que a .container vire um layout de coluna */
-        width: 100%; /* Aumenta a largura para que o conteúdo não fique cortado */
-        margin-top: 0; /* Remover a margem superior extra */
-        padding: 0 20px; /* Espaçamento interno lateral */
       }
 
+      /* Ajuste da estrutura da .container para um layout de coluna */
+      .container {
+        display: block; /* Muda para layout de bloco para empilhar conteúdo */
+        width: 100%; /* Garante que o conteúdo ocupe a largura total */
+        padding: 0 20px; /* Adiciona espaçamento nas laterais */
+        margin-top: 20px; /* Remover margem extra superior */
+      }
       /* Ajustes nos elementos dentro da .container */
       .left-section, .form-container {
         padding: 20px;
@@ -367,6 +366,11 @@ button:hover {
       .form-container {
         border-radius: 16px; /* Bordas do formulário arredondadas */
         margin-top: 20px; /* Espaçamento entre o conteúdo e o formulário */
+      }
+      /* Ajuste da largura do conteúdo do formulário */
+      .form-container {
+        width: 100%;
+        margin: 0 auto; /* Garante que o formulário esteja centralizado */
       }
 
     .form-container h2 {

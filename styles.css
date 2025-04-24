@@ -81,7 +81,7 @@ body {
     max-width: 1200px;
     width: 100%;
     overflow: hidden;
-    margin-top: 150px; /* Distância de top do conteúdo abaixo da logo */
+    margin-top: 80px; /* Distância de top do conteúdo abaixo da logo */
 }
 
 .left-section {

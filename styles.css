@@ -65,8 +65,8 @@ body {
 
 .logo-container {
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 50px;   /* distância do topo */
+  left: 50px;  /* distância da esquerda */
   z-index: 10;
 }
 
@@ -81,6 +81,7 @@ body {
     max-width: 1200px;
     width: 100%;
     overflow: hidden;
+    margin-top: 150px; /* Distância de top do conteúdo abaixo da logo */
 }
 
 .left-section {
@@ -319,15 +320,16 @@ button:hover {
     
     .logo-container {
         position: relative;
-        top: 0;
-        left: 0;
+        top: auto;
+        left: auto;
         display: flex;
         justify-content: center;
-        margin-bottom: 18px;
+        align-items: center;
+        margin: 20px auto;
     }
     
     .container {
-        grid-template-columns: 1fr;
+        margin-top: 80px; /* Ajusta o espaço do conteúdo abaixo */
     }
 
     .left-section, .form-container {

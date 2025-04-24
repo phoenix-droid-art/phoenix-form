@@ -81,7 +81,7 @@ body {
     max-width: 1200px;
     width: 100%;
     overflow: hidden;
-    margin-top: 80px; /* Distância de top do conteúdo abaixo da logo */
+    margin-top: 150px; /* Distância de top do conteúdo abaixo da logo */
 }
 
 .left-section {
@@ -318,30 +318,24 @@ button:hover {
     }
     */
     
-      .logo-container {
+    .logo-container {
         position: relative;
-        top: 0;
-        left: 0;
+        top: auto;
+        left: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px auto; /* Garantir a margem centralizada */
-      }
-
-      /* Mudar a estrutura para empilhar no celular */
+        margin: 20px auto;
+    }
+    
       .container {
-        display: block;  /* Empilhar conteúdo no celular */
-        width: 100%;
-        padding: 0 20px;  /* Padding para garantir que o conteúdo não fique colado nas bordas */
-        margin-top: 20px;  /* Remover margem extra no celular */
+        grid-template-columns: 1fr; /* O conteúdo fica em uma única coluna */
+        margin-top: 100px; /* Ajusta a margem para não ficar muito apertado */
       }
 
-
-      .left-section, .form-container {
+    .left-section, .form-container {
         padding: 20px;
-        text-align: center;
-        width: 100%;
-      }
+    }
 
     .left-section {
           display: flex;
@@ -357,21 +351,16 @@ button:hover {
         font-size: 20px;
     }
 
-    /*    .left-content {
+        .left-content {
           flex: 1;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-        }*/
+        }
       .form-container {
-        border-radius: 16px; /* Bordas do formulário arredondadas */
-        margin-top: 20px; /* Espaçamento entre o conteúdo e o formulário */
-      }
-      /* Ajuste da largura do conteúdo do formulário */
-      .form-container {
-        width: 100%;
-        margin: 0 auto; /* Garante que o formulário esteja centralizado */
+        border-radius: 16px; /* Ajuste da borda do formulário */
+        margin-top: 20px; /* Dá um espaço entre o conteúdo e o formulário */
       }
 
     .form-container h2 {

@@ -84,18 +84,18 @@ body {
 }
 
 .left-section {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start; /* a logo vai pro topo */
-      padding: 48px;
-      position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  position: relative;
 }
 
 .left-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .left-section img {
@@ -342,12 +342,12 @@ button:hover {
     }
     */
     .left-section {
-        padding: 20;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          align-items: center;
+          text-align: center;
+          position: relative;
     }
 
     .left-section p {
@@ -355,14 +355,13 @@ button:hover {
         font-size: 20px;
     }
 
-    .left-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-    }
-
+        .left-content {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
     .form-container {
         border-radius: 0 0 16px 16px;
     }

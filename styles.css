@@ -328,14 +328,20 @@ button:hover {
         margin: 20px auto;
     }
     
+      /* Ajuste da estrutura da .container para ficar em uma única coluna */
       .container {
-        grid-template-columns: 1fr; /* O conteúdo fica em uma única coluna */
-        margin-top: 100px; /* Ajusta a margem para não ficar muito apertado */
+        display: block; /* Faz com que a .container vire um layout de coluna */
+        width: 100%; /* Aumenta a largura para que o conteúdo não fique cortado */
+        margin-top: 0; /* Remover a margem superior extra */
+        padding: 0 20px; /* Espaçamento interno lateral */
       }
 
-    .left-section, .form-container {
+      /* Ajustes nos elementos dentro da .container */
+      .left-section, .form-container {
         padding: 20px;
-    }
+        text-align: center; /* Alinha o texto e o conteúdo no centro */
+        width: 100%; /* Garante que o conteúdo ocupe a largura total */
+      }
 
     .left-section {
           display: flex;
@@ -359,8 +365,8 @@ button:hover {
           align-items: center;
         }
       .form-container {
-        border-radius: 16px; /* Ajuste da borda do formulário */
-        margin-top: 20px; /* Dá um espaço entre o conteúdo e o formulário */
+        border-radius: 16px; /* Bordas do formulário arredondadas */
+        margin-top: 20px; /* Espaçamento entre o conteúdo e o formulário */
       }
 
     .form-container h2 {

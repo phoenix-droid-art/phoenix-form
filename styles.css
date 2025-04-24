@@ -325,21 +325,22 @@ button:hover {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px auto;
+        margin: 20px auto; /* Garantir a margem centralizada */
       }
 
-      /* Ajuste da estrutura da .container para um layout de coluna */
+      /* Mudar a estrutura para empilhar no celular */
       .container {
-        display: block; /* Muda para layout de bloco para empilhar conteúdo */
-        width: 100%; /* Garante que o conteúdo ocupe a largura total */
-        padding: 0 20px; /* Adiciona espaçamento nas laterais */
-        margin-top: 20px; /* Remover margem extra superior */
+        display: block;  /* Empilhar conteúdo no celular */
+        width: 100%;
+        padding: 0 20px;  /* Padding para garantir que o conteúdo não fique colado nas bordas */
+        margin-top: 20px;  /* Remover margem extra no celular */
       }
-      /* Ajustes nos elementos dentro da .container */
+
+
       .left-section, .form-container {
         padding: 20px;
-        text-align: center; /* Alinha o texto e o conteúdo no centro */
-        width: 100%; /* Garante que o conteúdo ocupe a largura total */
+        text-align: center;
+        width: 100%;
       }
 
     .left-section {
@@ -356,13 +357,13 @@ button:hover {
         font-size: 20px;
     }
 
-        .left-content {
+    /*    .left-content {
           flex: 1;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-        }
+        }*/
       .form-container {
         border-radius: 16px; /* Bordas do formulário arredondadas */
         margin-top: 20px; /* Espaçamento entre o conteúdo e o formulário */

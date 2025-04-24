@@ -43,7 +43,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: scroll;
     color: #f5f5f5;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -81,6 +81,7 @@ body {
     max-width: 1200px;
     width: 100%;
     overflow: hidden;
+    margin: 100px auto 40px auto; /* adiciona espaço abaixo da logo e centraliza horizontalmente */
 }
 
 .left-section {

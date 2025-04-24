@@ -328,21 +328,15 @@ button:hover {
         margin: 20px auto;
     }
     
-    .container {
-        margin-top: 80px; /* Ajusta o espaço do conteúdo abaixo */
-    }
+      .container {
+        grid-template-columns: 1fr; /* O conteúdo fica em uma única coluna */
+        margin-top: 100px; /* Ajusta a margem para não ficar muito apertado */
+      }
 
     .left-section, .form-container {
         padding: 20px;
     }
 
-   /* .left-section {
-        padding: 20px;
-        align-items: center;
-        text-align: center;
-        font-size: 24px;
-    }
-    */
     .left-section {
           display: flex;
           flex-direction: column;
@@ -364,9 +358,10 @@ button:hover {
           justify-content: center;
           align-items: center;
         }
-    .form-container {
-        border-radius: 0 0 16px 16px;
-    }
+      .form-container {
+        border-radius: 16px; /* Ajuste da borda do formulário */
+        margin-top: 20px; /* Dá um espaço entre o conteúdo e o formulário */
+      }
 
     .form-container h2 {
         font-size: 28px;

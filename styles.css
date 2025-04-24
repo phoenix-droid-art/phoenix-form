@@ -318,18 +318,19 @@ button:hover {
     }
     */
     
-    .logo-container {
-        position: relative;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 18px;
-    }
-    
-    .container {
-        grid-template-columns: 1fr;
-    }
+      .logo-container {
+          position: relative;
+          top: auto;
+          left: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px auto;
+      }
+
+      .container {
+          margin: 0 auto;
+      }
 
     .left-section, .form-container {
         padding: 20px;

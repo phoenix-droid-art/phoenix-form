@@ -43,7 +43,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: scroll;
     color: #f5f5f5;
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -81,7 +81,6 @@ body {
     max-width: 1200px;
     width: 100%;
     overflow: hidden;
-    margin: 100px auto 40px auto; /* adiciona espaço abaixo da logo e centraliza horizontalmente */
 }
 
 .left-section {
@@ -318,19 +317,18 @@ button:hover {
     }
     */
     
-      .logo-container {
-          position: relative;
-          top: auto;
-          left: auto;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 20px auto;
-      }
-
-      .container {
-          margin: 0 auto;
-      }
+    .logo-container {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 18px;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+    }
 
     .left-section, .form-container {
         padding: 20px;

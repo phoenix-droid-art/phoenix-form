@@ -107,7 +107,7 @@ body {
     display: inline-block;
     background-color: #bc2649;
     padding: 2px 8px;
-    border-radius: 3px;
+    border-radius: 6px;
     color: #fff;
     font-weight: bold;
 }
@@ -311,7 +311,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px auto 20px auto; /* centraliza e dá espaço */
+    margin: 20px auto 10px auto; /* centraliza e dá espaço */
     z-index: 1;
   }
 

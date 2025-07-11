@@ -46,7 +46,7 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ success: true });
   } catch (error) {
-    console.error('Erro no backend:', error);
-    return res.status(500).json({ error: 'Erro interno do servidor' });
+    console.error('Erro no backend:', error.response?.data || error.message || error);
+    return res.status(500).json({ error: 'Erro interno do servidor', detalhes: error.message });
   }
 }
